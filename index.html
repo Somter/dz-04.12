@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="car-info" id="placeholder1"></div>
+
+    <script>
+        'use strict'
+
+        // Задание 1
+        // function Car(manufacturer, model, year, speed){
+        //     this.manufacturer = manufacturer;
+        //     this.model = model;
+        //     this.year = year;
+        //     this.speed = speed; 
+        // }
+
+        //     Car.prototype.PrintInformation = function(element){
+        //         element.insertAdjacentHTML("beforeend", `производитель: ${this.manufacturer}<br />`);
+        //         element.insertAdjacentHTML("beforeend", `модель: ${this.model}<br />`);
+        //         element.insertAdjacentHTML("beforeend", `год выпуска: ${this.year}<br />`); 
+        //         element.insertAdjacentHTML("beforeend", `средняя скорость: ${this.speed}<br />`);
+        //     }
+
+        //     Car.prototype.calculateTime = function(distance) {
+        //         let hour = parseFloat(this.speed); 
+        //         let hoursBreaks = distance / hour;
+        //         let breaks = Math.floor(hoursBreaks / 4);
+        //         let result = hoursBreaks + breaks;
+        //         return result;
+
+        //     }
+
+
+        // let car = new Car("Tesla", "cybertruck", "2023", "105 km/h"); 
+        // let placeholder = document.querySelector("#placeholder1");  
+        // car.PrintInformation(placeholder);  
+
+        // let distance = prompt("Введите растояние:");
+        // let time = car.calculateTime(distance);
+        // document.write(`Время для преодоления ${distance} км: ${time} часов`);
+
+        // Задание 2
+        // let numerator1 = 1;
+        // let denominator1 = 2;
+        // let numerator2 = 3;
+        // let denominator2 = 4;
+
+        // function Fraction(numerator1, denominator1, numerator2, denominator2) {
+        //     this.num1 = numerator1;
+        //     this.den1 = denominator1;
+        //     this.num2 = numerator2;
+        //     this.den2 = denominator2;
+        // }
+
+        // Fraction.prototype.addition = function () {
+        //     let commonDenominator = this.den1 * this.den2;
+        //     let newNumerator = this.num1 * this.den2 + this.num2 * this.den1;
+        //     document.write(commonDenominator + "/" + newNumerator);
+        // }
+
+        // Fraction.prototype.subtraction = function () {
+        //     let commonDenominator = this.den1 * this.den2;
+        //     let newNumerator = this.num1 * this.den2 - this.num2 * this.den1;
+        //     document.write(newNumerator + "/" + commonDenominator);
+        // }
+
+        // Fraction.prototype.multiplication = function () {
+        //     let newNumerator = this.num1 * this.num2;
+        //     let newDenominator = this.den1 * this.den2;
+        //     document.write(newNumerator + "/" + newDenominator);
+        // }
+
+        // Fraction.prototype.division = function () {
+        //     let newNumerator = this.num1 * this.den2;
+        //     let newDenominator = this.den1 * this.num2;
+        //     document.write(newNumerator + "/" + newDenominator)
+        // }
+
+        // Fraction.prototype.reduce = function () {
+        //     let gcd = function (a, b) {
+        //         return b === 0 ? a : gcd(b, a % b);
+        //     };
+
+        //     let commonDivisor = gcd(this.num1, this.den1);
+        //     this.num1 /= commonDivisor;
+        //     this.den1 /= commonDivisor;
+
+        //     let commonDivisor2 = gcd(this.num2, this.den2);
+        //     this.num2 /= commonDivisor2;
+        //     this.den2 /= commonDivisor2;
+        // }
+
+
+        // let fract = new Fraction(numerator1, denominator1, numerator2, denominator2);
+
+        // document.write("Сложение дробей: ");
+        // fract.addition()
+        // document.write("<br/>Вычитание дробей: ");
+        // fract.subtraction();
+        // document.write("<br/>Умножение дробей: ");
+        // fract.multiplication();
+        // document.write("<br/>Деление дробей: ");
+        // fract.division();
+        // fract.reduce();
+        // document.write("<br/>Дроби после сокращения: " + fract.num1 + "/" + fract.den1 + ", " + fract.num2 + "/" + fract.den2);
+
+        // Задание 3
+        // let hours = 20;
+        // let minutes = 30;
+        // let seconds = 15;
+
+        // function Time(hours, minutes, seconds) {
+        //     this.h = hours;
+        //     this.m = minutes;
+        //     this.s = seconds;
+        // }
+
+        // Time.prototype.Print = function () {
+        //     document.write(this.h + ":" + this.m + ":" + this.s);
+        // }
+
+        // Time.prototype.Seconds = function (deltaSeconds) {
+        //     let totalSeconds = this.h * 3600 + this.m * 60 + this.s + deltaSeconds;
+        //     this.h = Math.floor(totalSeconds / 3600) % 24;
+        //     this.m = Math.floor((totalSeconds % 3600) / 60);
+        //     this.s = totalSeconds % 60;
+        // }
+
+        // Time.prototype.Minutes = function (deltaMinutes) {
+        //     let totalMinutes = this.h * 60 + this.m + deltaMinutes;
+        //     this.h = Math.floor(totalMinutes / 60) % 24;
+        //     this.m = totalMinutes % 60;
+        // }
+        // Time.prototype.Hours = function (deltaHours) {
+        //     this.h = (this.h + deltaHours) % 24;
+        // }
+
+        // let time = new Time(20, 30, 15);
+        // time.Print();
+        // document.write("<br/>");
+
+        // document.write("На 100 секунд больше: ");
+        // time.Seconds(100);
+        // time.Print();
+
+        // document.write("<br>");
+        // document.write("На 30 минут больше: ");
+        // time.Minutes(30);
+        // time.Print();
+
+        // document.write("<br>");
+        // document.write("На 10 часов больше: ");
+        // time.Hours(10);
+        // time.Print();
+
+
+    </script>
+
+</body>
+
+</html>
